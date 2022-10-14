@@ -13,12 +13,12 @@ class UserModel(models.Model):
 
 
 class MentorsModel(models.Model):
-    fist_name = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=13)
     web_site = models.CharField(max_length=100)
     experience = models.CharField(max_length=100)
-    user_id = models.OneToOneField(UserModel, on_delete=models.RESTRICT, related_name='user1',)
+    user_id = models.OneToOneField(UserModel, on_delete=models.RESTRICT, related_name='user1')
 
     def __str__(self):
         return self.fist_name
@@ -54,7 +54,7 @@ class GroupsModel(models.Model):
 
 
 class StudentsModel(models.Model):
-    fist_name = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=13)
     id_card = models.CharField(max_length=100)
